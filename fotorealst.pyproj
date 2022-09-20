@@ -20,7 +20,6 @@
   </PropertyGroup>
   <ItemGroup>
     <Content Include=".gitignore" />
-    <Content Include=".vs\slnx.sqlite" />
     <Content Include="fotorealst.pyproj" />
     <Content Include="LICENSE" />
     <Content Include="notebooks\create_models.ipynb" />
