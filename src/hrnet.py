@@ -52,10 +52,7 @@ class BottleneckBlock(nn.Module):
     
     def forward(self, x):
         out = self.identity_block(x)
-        if self.in_c == self.out_c:
-            residual = x
-        else:
-            residual = self.shortcut(x)
+        residual = x if self.in_c == self.out_c else self.shortcut(x)
         out += residual
         out = F.relu(out)
         return out

@@ -101,11 +101,10 @@ if __name__ == "__main__":
 
     # Load device and VGG
     if args.use_gpu:
-        if torch.cuda.is_available():
-            device = torch.device('cuda')
-            torch.backends.cudnn.benchmark = True
-        else:
+        if not torch.cuda.is_available():
             raise Exception('GPU is not available')
+        device = torch.device('cuda')
+        torch.backends.cudnn.benchmark = True
     else:
         device = torch.device('cpu')
 

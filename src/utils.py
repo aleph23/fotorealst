@@ -73,5 +73,4 @@ def get_gram_matrix(img):
     """
     b, c, h, w = img.size()
     img = img.view(b*c, h*w)
-    gram = torch.mm(img, img.t())
-    return gram
+    return torch.mm(img, img.t())
